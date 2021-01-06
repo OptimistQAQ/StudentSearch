@@ -44,7 +44,7 @@ public class GradeSearchJPanel extends BaseJPanel {
                 Object[][] data = GradeUtil.getGradeBySno(sno,year,term);
                 Object[] name = {"学号","姓名","课程号","课程名","学分","成绩"};
                 remove(table);
-                table = new JTable(data,name);
+                table = new JTable(data, name);
                 table.setFont(new Font("楷体", Font.PLAIN, 18));
                 table.setBounds(50, 150, 950, 200);
                 setTableStyle(table);
@@ -76,7 +76,7 @@ public class GradeSearchJPanel extends BaseJPanel {
         yearBox = new JComboBox<>();
         yearBox.setFont(new Font("楷体", Font.PLAIN, 18));
         yearModel = new DefaultComboBoxModel<>(
-                new String[] {"2018-2019", "2019-2020", "2020-2021"}
+                new String[] {"", "2018-2019", "2019-2020", "2020-2021"}
         );
         yearBox.setModel(yearModel);
         yearBox.setBounds(142, 150, 131, 30);
