@@ -182,7 +182,7 @@ public class TeaManageJPanel extends BaseJPanel {
 
     }
 
-    private void initView(){
+    private void initView() {
         JLabel label = new JLabel("\u6559\u5E08\u53F7\uFF1A");
         label.setFont(new Font("楷体", Font.PLAIN, 20));
         label.setBounds(508, 121, 80, 30);
@@ -292,18 +292,15 @@ public class TeaManageJPanel extends BaseJPanel {
         changeButton.setEnabled(false);
     }
 
-    TableCellRenderer renderer = new TableCellRenderer() {
-        @Override
-        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
-            // 创建用于返回的渲染组件
-            JCheckBox ck = new JCheckBox();
-            // 使具有焦点的行对应的复选框选中
-            ck.setSelected(isSelected);
-            // 设置单选box.setSelected(hasFocus);
-            // 使复选框在单元格内居中显示
-            ck.setHorizontalAlignment((int) 0.5f);
-            return ck;
-        }
+    TableCellRenderer renderer = (table, value, isSelected, hasFocus, row, column) -> {
+        // 创建用于返回的渲染组件
+        JCheckBox ck = new JCheckBox();
+        // 使具有焦点的行对应的复选框选中
+        ck.setSelected(isSelected);
+        // 设置单选box.setSelected(hasFocus);
+        // 使复选框在单元格内居中显示
+        ck.setHorizontalAlignment((int) 0.5f);
+        return ck;
     };
 
     private String[] getTeaByDept(String deptName,String sql){
