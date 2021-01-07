@@ -18,18 +18,6 @@ public class ClassUtil {
             "from class " +
             "where class.CLmajor=?;";
 
-    private static String searchCourseByCno = "select course.Cname from course " +
-            "where course.Cno not in (select teaching.Cno from teaching);";
-
-    private static String searchArrCourseByCno = "select course.Cname from course " +
-            "where course.Cno in (select teaching.Cno from teaching);";
-
-    private static String searchTeaSQL = "select Tname from teacher " +
-            "where teacher.Tno not in (select teaching.Tno from teaching);";
-
-    private static String searchTnoByName = "select Tno from teacher where Tname=?;";
-    private static String searchCnoByName = "select Cno from course where Cname=?;";
-
     static {
         connect = DBHelper.getConnect();
     }
@@ -113,7 +101,7 @@ public class ClassUtil {
             while (resultSet.next()) {
                 index++;
             }
-            String[] CLnoList = CLnoList = new String[index];
+            String[] CLnoList = new String[index];
             resultSet = statement.executeQuery();
             index = 0;
             while (resultSet.next()) {

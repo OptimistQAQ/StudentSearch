@@ -294,6 +294,7 @@ public class StuManageJPanel extends BaseJPanel {
         table.getColumnModel().getColumn(5).setPreferredWidth(60);
         table.getColumnModel().getColumn(6).setPreferredWidth(80);
         table.getColumnModel().getColumn(7).setPreferredWidth(160);
+        //居中显示
         DefaultTableCellRenderer r = new DefaultTableCellRenderer();
         r.setHorizontalAlignment(JLabel.CENTER);
         table.setDefaultRenderer(Object.class, r);
