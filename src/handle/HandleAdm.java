@@ -19,8 +19,6 @@ public class HandleAdm {
     private static String updateSQL = "update manager " + "set Mname=?,Msex=?,Mage=?,Mtel=?,Memail=? " + "where Mno=?;";
     private static String setpasswordSQL = "update manager " + "set Mpassword=? " + "where Mno=?;";
     private static String oldpasswordSQL = "select Mpassword " + "from manager " + "where Mno=?;";
-    private static String trueSQL = "update gradesystem " + "set Mgrade=1;";
-    private static String falseSQL = "update gradesystem " + "set Mgrade=0;";
 
     /*
      * -1:用户名不存在(用户名输入不正确)

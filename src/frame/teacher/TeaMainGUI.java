@@ -100,7 +100,7 @@ public class TeaMainGUI extends BaseJFrame implements TreeSelectionListener {
         statusbar.setLayout(new BorderLayout());
 
         btn_exit = new JButton("退出");
-        btn_exit.setBackground(new Color(0, 191, 255));
+        btn_exit.setBackground(new Color(5, 46, 248));
         btn_exit.setForeground(Color.WHITE);
         btn_exit.setFont(new Font("黑体", Font.PLAIN, 20));
         btn_exit.setBounds(20, 560, 97, 33);
