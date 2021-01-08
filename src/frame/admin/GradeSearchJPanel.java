@@ -18,7 +18,6 @@ import javax.swing.table.TableColumn;
 
 public class GradeSearchJPanel extends BaseJPanel {
 
-
     private JTextField snoTextField;
     private JTable table;
     private JButton selectButton,deleteButton,changeButton,chartButton,exportButton;
@@ -122,13 +121,6 @@ public class GradeSearchJPanel extends BaseJPanel {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        });
-
-        chartButton.addActionListener(e -> {
-            String cYear = yearComboBox.getSelectedItem().toString();
-            String cTerm = termComboBox.getSelectedItem().toString();
-            String cClass =  classComboBox.getSelectedItem().toString();
-            ChartJFrame jFrame = new ChartJFrame("./src/pictures/class.png", cYear,cTerm,cClass);
         });
 
         exportButton.addActionListener(new ActionListener() {
