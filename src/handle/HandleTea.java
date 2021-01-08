@@ -43,7 +43,7 @@ public class HandleTea {
 
         handleSQL = new HandleSQL(con);
 
-        //查找教师表里面所有  教师号为用户输入的用户名的教师,并添加到列表里
+        //查找教师表里面  教师号为用户输入的用户名的教师,并添加到列表里
         ArrayList<Teacher> teachers = handleSQL.findTeaBySQL("select Tno,Tpassword from teacher where Tno='"+teacher.getTno()+"'");
 
         if(teachers.size()<1)//该用户名在教师表里面不存在

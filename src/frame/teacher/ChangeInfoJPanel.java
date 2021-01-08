@@ -10,6 +10,7 @@ import util.DialogUtil;
 import java.awt.Color;
 
 public class ChangeInfoJPanel extends BaseJPanel {
+
 	private String Tno;
 	private JTextField tNameField;//姓名
 	private JComboBox<String> tSexComboBox;//性别
@@ -23,8 +24,6 @@ public class ChangeInfoJPanel extends BaseJPanel {
 	private JTextField tEmailField;//邮箱
 	private JButton btn_update;//确认修改按钮
 	private Teacher teacher;
-
-
 
 	public ChangeInfoJPanel(String Tno) {
 		super("修改信息");

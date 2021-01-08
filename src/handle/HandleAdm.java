@@ -76,7 +76,7 @@ public class HandleAdm {
     public int checkAdn(Admin admin) throws SQLException {
         handleSQL = new HandleSQL(con);
 
-        //查找管理员表里面所有  管理员号为用户输入的用户名的管理员,并添加到列表里
+        //查找管理员表里面  管理员号为用户输入的用户名的管理员,并添加到列表里
         ArrayList<Admin> admins = handleSQL.findAdnBySQL("select Mno,Mpassword from manager where Mno='" + admin.getMno() + "'");
 
         if (admins.size() < 1)//该用户名在管理员表里面不存在

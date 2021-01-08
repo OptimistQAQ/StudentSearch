@@ -44,7 +44,7 @@ public class HandleStu {
     public int checkStu(Student student) throws SQLException {
         handleSQL = new HandleSQL(connection);
 
-        //查找学生表里面所有  学号为用户输入的用户名的学生 , 并添加到列表里
+        //查找学生表里面  学号为用户输入的用户名的学生 , 并添加到列表里
         ArrayList<Student> students = handleSQL.findStuBySQL(
                 "select Sno,Spassword from student where Sno='"
                         + student.getSno() + "'"

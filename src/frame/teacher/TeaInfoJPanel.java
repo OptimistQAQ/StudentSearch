@@ -11,7 +11,7 @@ public class TeaInfoJPanel extends BaseJPanel {
 
 	private String Tno;
 	public TeaInfoJPanel(String Tno) {
-		super("基本信息");
+		super("教师基本信息");
 		this.Tno = Tno;
 		setLayout(null);
 		initComponent();//界面设计

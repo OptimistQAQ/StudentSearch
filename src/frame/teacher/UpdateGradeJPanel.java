@@ -25,7 +25,7 @@ public class UpdateGradeJPanel extends BaseJPanel {
 	 * Create the panel.
 	 */
 	public UpdateGradeJPanel() {
-		super("修改成绩");
+		super("修改学生成绩");
 		setLayout(null);
 		initComponent();//界面设计
 		addEventHandler();//事件处理
