@@ -369,10 +369,11 @@ public class HandleSQL {
             e.printStackTrace();
         }
 
-        if(snos.size()<1)
+        if (snos.size()<1) {
             return false;
-        else
+        } else {
             return true;
+        }
     }
 
     //查找学号为Sno的学生的所有课程成绩
@@ -439,7 +440,7 @@ public class HandleSQL {
             preparedsmt.setString(2,Sno);
             preparedsmt.setString(3,Cno);
             int result = preparedsmt.executeUpdate();
-            if(result > 0){
+            if(result > 0) {
                 return true;
             }
         } catch (SQLException e) {
