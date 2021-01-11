@@ -172,6 +172,7 @@ public class LoginActivity extends JFrame implements KeyListener {
         btn_enter.addActionListener(new ActionListener() {
             String identity = ""; //用户登录身份
 
+            @Override
             public void actionPerformed(ActionEvent arg0) {
                 Enumeration<AbstractButton> radioBtns = group.getElements();
                 while (radioBtns.hasMoreElements()) {
@@ -197,6 +198,7 @@ public class LoginActivity extends JFrame implements KeyListener {
         rBtn_Adn.addKeyListener(this);
         //响应“退出”按钮
         btn_exit.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent arg0) {
                 handle_exit();//处理退出
             }
