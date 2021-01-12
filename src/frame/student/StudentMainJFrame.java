@@ -101,7 +101,7 @@ public class StudentMainJFrame extends BaseJFrame implements TreeSelectionListen
         btn_exit.setBackground(new Color(5, 46, 248));
         btn_exit.setForeground(Color.WHITE);
         btn_exit.setFont(new Font("黑体", Font.PLAIN, 20));
-        btn_exit.setBounds(20, 560, 97, 33);
+        btn_exit.setBounds(20, 600, 97, 33);
         contentPane.add(btn_exit);
 
         lbl_userinfo = new JLabel();
@@ -123,6 +123,7 @@ public class StudentMainJFrame extends BaseJFrame implements TreeSelectionListen
 
         timer = new Timer();
         timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
             public void run() {
                 lbl_time.setText(sdf.format(new Date()));
             }

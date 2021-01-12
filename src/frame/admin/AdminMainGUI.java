@@ -105,7 +105,7 @@ public class AdminMainGUI extends BaseJFrame implements TreeSelectionListener {
         btn_exit.setBackground(new Color(5, 46, 248));
         btn_exit.setForeground(Color.WHITE);
         btn_exit.setFont(new Font("黑体", Font.PLAIN, 20));
-        btn_exit.setBounds(20, 560, 97, 33);
+        btn_exit.setBounds(20, 600, 97, 33);
         contentPane.add(btn_exit);
 
         lbl_userInfo = new JLabel();
