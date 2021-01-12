@@ -56,10 +56,11 @@ public class LoginActivity extends JFrame implements KeyListener {
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 try {
-                    LoginActivity frame = new LoginActivity();
-                    frame.setVisible(true);
+                    LoginActivity loginActivity = new LoginActivity();
+                    loginActivity.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
