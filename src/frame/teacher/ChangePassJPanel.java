@@ -7,13 +7,16 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import bean.Teacher;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import activity.LoginActivity;
 import handle.HandleSQL;
 import util.DialogUtil;
 
 import java.awt.Color;
 
+/**
+ * @author Optimist
+ */
 public class ChangePassJPanel extends BaseJPanel implements KeyListener {
 
 	private String Tno;//教师号

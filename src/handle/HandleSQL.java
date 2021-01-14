@@ -7,6 +7,9 @@ import bean.Teacher;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * @author Optimist
+ */
 public class HandleSQL {
     private static Connection con = null;
     private Statement smt = null;

@@ -4,6 +4,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 
+import handle.BaseJPanel;
 import util.*;
 
 import java.awt.event.ActionEvent;
@@ -16,6 +17,10 @@ import java.sql.SQLException;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 
+/**
+ * 查询成绩
+ * @author Optimist
+ */
 public class GradeSearchJPanel extends BaseJPanel {
 
     private JTextField snoTextField;

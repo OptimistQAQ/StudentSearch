@@ -1,12 +1,12 @@
 package frame.admin;
 
+import handle.BaseJPanel;
 import handle.HandleStu;
 import util.ClassUtil;
 import util.DBHelper;
 import util.DialogUtil;
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -16,6 +16,10 @@ import java.awt.event.ItemListener;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * 学生管理
+ * @author Optimist
+ */
 public class StuManageJPanel extends BaseJPanel {
 
     private JComboBox<String> deptComboBox,majorComboBox,classComboBox;

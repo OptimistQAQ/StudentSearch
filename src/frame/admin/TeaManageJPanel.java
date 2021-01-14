@@ -4,6 +4,8 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
+
+import handle.BaseJPanel;
 import handle.HandleTea;
 import util.ClassUtil;
 import util.DBHelper;
@@ -13,6 +15,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * 老师管理
+ * @author Optimist
+ */
 public class TeaManageJPanel extends BaseJPanel {
 
     private JTextField textField;

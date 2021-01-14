@@ -1,7 +1,7 @@
 package frame.student;
 
 import util.ChartJPanel;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import util.DialogUtil;
 import util.FileUtil;
 import util.GradeUtil;
@@ -10,7 +10,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 /**
- * 查询成绩界面
+ * 查成绩
+ * @author Optimist
  */
 public class GradeSearchJPanel extends BaseJPanel {
 

@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author Optimist
+ */
 public class ClassUtil {
 
     private static Connection connect;
@@ -22,6 +25,7 @@ public class ClassUtil {
         connect = DBHelper.getConnect();
     }
 
+
     private static String[] getDeptMajorClass(PreparedStatement statement) {
         int count = 0;
         ResultSet resultSet = null;
@@ -30,7 +34,7 @@ public class ClassUtil {
             while (resultSet.next()) {
                 count++;
             }
-            String[] CLnoList = CLnoList = new String[count];
+            String[] CLnoList = new String[count];
             resultSet = statement.executeQuery();
             count = 0;
             while (resultSet.next()) {

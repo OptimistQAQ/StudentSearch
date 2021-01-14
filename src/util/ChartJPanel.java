@@ -19,6 +19,7 @@ import java.awt.*;
 
 /**
  * 图标展示
+ * @author Optimist
  */
 public class ChartJPanel extends JPanel {
 

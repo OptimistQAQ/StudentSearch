@@ -1,10 +1,16 @@
 package frame.admin;
+import handle.BaseJPanel;
 import handle.HandleAdm;
 import util.DialogUtil;
 import java.awt.Font;
 import javax.swing.*;
 
+/**
+ * 修改管理员信息
+ * @author Optimist
+ */
 public class AdminChangeInfoJPanel extends BaseJPanel {
+
     private JTextField emailTextField;
 
     public AdminChangeInfoJPanel(String Mno,JFrame main) {
@@ -14,8 +20,6 @@ public class AdminChangeInfoJPanel extends BaseJPanel {
         MnoLabel.setFont(new Font("楷体", Font.PLAIN, 18));
         MnoLabel.setBounds(124, 106, 107, 30);
         add(MnoLabel);
-
-
 
         JTextField MnotextField = new JTextField();
         MnotextField.setFont(new Font("楷体", Font.PLAIN, 18));

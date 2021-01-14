@@ -3,18 +3,21 @@ package frame.admin;
 import javax.swing.*;
 
 import activity.LoginActivity;
+import handle.BaseJPanel;
 import handle.HandleAdm;
 import util.DialogUtil;
 
 import java.awt.Font;
 
+/**
+ * 修改密码
+ * @author Optimist
+ */
 public class ChangePasswordJPanel extends BaseJPanel {
 
     private JPasswordField newPasswordField;
     private JPasswordField surePasswordField;
     private JPasswordField oldPasswordField;
-
-
 
     public ChangePasswordJPanel(String Mno,JFrame main) {
         super("修改密码");

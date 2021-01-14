@@ -3,6 +3,9 @@ package util;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * @author Optimist
+ */
 public class BaseJFrame extends JFrame {
     public BaseJFrame(String title, String srcPath){
         //设置窗体图标

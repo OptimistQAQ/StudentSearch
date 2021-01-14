@@ -17,6 +17,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  * 管理员主界面
+ * @author Optimist
  */
 public class AdminMainGUI extends BaseJFrame implements TreeSelectionListener {
 
@@ -160,7 +161,7 @@ public class AdminMainGUI extends BaseJFrame implements TreeSelectionListener {
                 ChangePasswordJPanel panel = new ChangePasswordJPanel(admin.getMno(),this);
                 replaceJPanel(panel);
             });
-        }else if(node == gradeArrangeNode){  //成绩管理课程
+        }else if(node == gradeArrangeNode){  //成绩管理
             EventQueue.invokeLater(() ->{
                 GradeSearchJPanel panel = new GradeSearchJPanel(this);
                 replaceJPanel(panel);

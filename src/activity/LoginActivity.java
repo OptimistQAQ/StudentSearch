@@ -33,6 +33,10 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.Color;
 
+/**
+ * 主入口
+ * @author Optimist
+ */
 public class LoginActivity extends JFrame implements KeyListener {
 
     private JTextField txtField; //文本框

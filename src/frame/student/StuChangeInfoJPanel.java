@@ -1,14 +1,15 @@
 package frame.student;
 
 import bean.Student;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import handle.HandleStu;
 import util.DialogUtil;
 import javax.swing.*;
 import java.awt.*;
 
 /**
- * 修改个人信息界面
+ * 修改信息
+ * @author Optimist
  */
 public class StuChangeInfoJPanel extends BaseJPanel {
 

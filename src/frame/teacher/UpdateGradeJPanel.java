@@ -9,10 +9,13 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import handle.HandleSQL;
 import util.DialogUtil;
 
+/**
+ * @author Optimist
+ */
 public class UpdateGradeJPanel extends BaseJPanel {
 
 	private JTextField snoField;//输入学号

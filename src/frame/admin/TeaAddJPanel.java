@@ -2,16 +2,17 @@ package frame.admin;
 
 import javax.swing.*;
 
-import handle.HandleSQL;
+import handle.BaseJPanel;
 import handle.HandleTea;
 import util.DialogUtil;
 
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
+/**
+ * 添加教师
+ * @author Optimist
+ */
 public class TeaAddJPanel extends BaseJPanel {
-
 
     private JTextField tnoTextField;
     private JTextField TnametextField;
@@ -73,7 +74,7 @@ public class TeaAddJPanel extends BaseJPanel {
         add(lblNewLabel_3);
 
         JComboBox<String> tDeptComboBox = new JComboBox<>();
-        tDeptComboBox.setModel(new DefaultComboBoxModel<>(new String[]{"\u5927\u6570\u636E\u5B66\u9662", "\u7ECF\u6D4E\u7BA1\u7406\u5B66\u9662"}));
+        tDeptComboBox.setModel(new DefaultComboBoxModel<>(new String[]{"大数据学院"}));
         tDeptComboBox.setFont(new Font("楷体", Font.PLAIN, 18));
         tDeptComboBox.setBounds(140, 415, 130, 30);
         add(tDeptComboBox);

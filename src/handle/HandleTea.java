@@ -27,7 +27,7 @@ public class HandleTea {
     private static String DeleteSQL="delete from teacher where Tno=?;";
     private static String InitializeSQL="update teacher "+"set Tpassword='123456' "+"where Tno=?;";
 
-    /*
+    /**
      * -1:用户名不存在(用户名输入不正确)
      * 0:用户密码错误
      * 1:用户名密码均正确

@@ -1,7 +1,7 @@
 package frame.student;
 
 import bean.Student;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import activity.LoginActivity;
 import handle.HandleStu;
 import util.DialogUtil;
@@ -9,7 +9,8 @@ import javax.swing.*;
 import java.awt.Font;
 
 /**
- * 修改密码
+ * 改密码
+ * @author Optimist
  */
 public class ChangePasswordJPanel extends BaseJPanel {
 

@@ -2,11 +2,14 @@ package frame.teacher;
 
 import java.awt.Font;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
+
 import bean.Teacher;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import handle.HandleSQL;
 
+/**
+ * @author Optimist
+ */
 public class TeaInfoJPanel extends BaseJPanel {
 
 	private String Tno;

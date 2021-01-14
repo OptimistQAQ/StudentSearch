@@ -10,11 +10,15 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JTable;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import handle.HandleSQL;
 import util.DBHelper;
 import util.DialogUtil;
 
+/**
+ * 查课程
+ * @author Optimist
+ */
 public class CourseSearchJPanel extends BaseJPanel {
     private String Sno;
     private JTable courseTable;//课程表格

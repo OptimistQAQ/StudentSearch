@@ -1,5 +1,8 @@
 package bean;
 
+/**
+ * @author Optimist
+ */
 public class Student {
 
     private String Sno; //学号

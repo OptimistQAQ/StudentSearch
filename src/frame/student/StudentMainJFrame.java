@@ -17,6 +17,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  * 学生主界面
+ * @author Optimist
  */
 public class StudentMainJFrame extends BaseJFrame implements TreeSelectionListener {
 

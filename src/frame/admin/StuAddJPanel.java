@@ -2,12 +2,17 @@ package frame.admin;
 
 import java.awt.Font;
 import javax.swing.*;
+
+import handle.BaseJPanel;
 import handle.HandleStu;
 import util.ClassUtil;
 import util.DialogUtil;
 
+/**
+ * 添加学生
+ * @author Optimist
+ */
 public class StuAddJPanel extends BaseJPanel {
-
 
     public StuAddJPanel(JFrame main) {
         super("添加学生");

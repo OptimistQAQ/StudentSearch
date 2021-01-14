@@ -28,7 +28,7 @@ public class HandleStu {
     private HandleSQL handleSQL;
     private static PreparedStatement statement;
 
-    /*
+    /**
      * -1: 代表用户名不存在(用户名输入错误)
      * 0: 代表用户密码错误
      * 1: 代表用户名密码均正确

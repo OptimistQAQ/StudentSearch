@@ -1,5 +1,8 @@
 package bean;
 
+/**
+ * @author Optimist
+ */
 public class Teacher {
 
     private String Tno;  //教师编号
@@ -9,15 +12,6 @@ public class Teacher {
     private String Tdegree;  //学历
     private String Ttitle;  //职称
     private String Tduty; //职务
-
-    public String getTemail() {
-        return Temail;
-    }
-
-    public void setTemail(String temail) {
-        Temail = temail;
-    }
-
     private String Ttel;  //电话
     private String Tage;  //年龄
     private String Temail;
@@ -53,6 +47,14 @@ public class Teacher {
         this.Ttel = Ttel;
         this.Tage = Tage;
         this.Tpassword = Tpassword;
+    }
+
+    public String getTemail() {
+        return Temail;
+    }
+
+    public void setTemail(String temail) {
+        Temail = temail;
     }
 
     public String getTno() {

@@ -5,6 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author Optimist
+ */
 public class GradeUtil {
 
     private static Connection connect;
@@ -33,21 +36,6 @@ public class GradeUtil {
             "where Student.Sno=Csgrade.Sno and " +
             "Csgrade.Cno=Course.Cno and Course.Cno=classcourse.Cno and Student.Sclass=classcourse.CLno and " +
             "Student.Sno=? and classcourse.Cyear=? and classcourse.Cterm=?;";
-
-    private static String gradeClassChartSQL = "select distinct avg(Grade) " +
-            "from Student,Course,Csgrade,classcourse " +
-            "where Student.Sno=Csgrade.Sno and " +
-            "Csgrade.Cno=Course.Cno and Student.Sclass = classcourse.CLno and " +
-            "Student.Sclass=? and course.Cno = classcourse.Cno and " +
-            "classcourse.Cyear=? and classcourse.Cterm=? and " +
-            "Cname=? group by Cname;";
-
-    private static String gradeDate = "select distinct Course.Cname " +
-            "from Student,Course,Csgrade,classcourse " +
-            "where Student.Sno=Csgrade.Sno and " +
-            "Csgrade.Cno=Course.Cno and Student.Sclass = classcourse.CLno and " +
-            "Student.Sclass=? and course.Cno = classcourse.Cno and " +
-            "classcourse.Cyear=? and classcourse.Cterm=?;";
 
     public static String[][] getGradeBySno(String Sno,String year,String term){
         String[][] result = new String[0][];
@@ -136,53 +124,6 @@ public class GradeUtil {
                 result[count][5] = resultSet.getString(6);
                 count ++;
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-
-    public static String getGradeChartByClass(String cName,String cYear,String cTerm,String sClass){
-        String result = "";
-        ResultSet resultSet  = null;
-        try{
-            statement = connect.prepareStatement(gradeClassChartSQL);
-            statement.setString(1,sClass);
-            statement.setString(2,cYear);
-            statement.setString(3,cTerm);
-            statement.setString(4,cName);
-            resultSet = statement.executeQuery();
-            while (resultSet.next()){
-                result = resultSet.getString(1);
-            }
-            return result;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return result;
-    }
-
-    public static String[] getGradeDate(String cYear,String cTerm,String sClass){
-        String result[] = new String[0];
-        ResultSet resultSet  = null;
-        int count = 0;
-        try{
-            statement = connect.prepareStatement(gradeDate);
-            statement.setString(1,sClass);
-            statement.setString(2,cYear);
-            statement.setString(3,cTerm);
-            resultSet = statement.executeQuery();
-            while (resultSet.next()){
-                count ++;
-            }
-            result = new String[count];
-            count = 0;
-            resultSet = statement.executeQuery();
-            while (resultSet.next()){
-                result[count] = resultSet.getString(1);
-                count++;
-            }
-            return result;
         } catch (SQLException e) {
             e.printStackTrace();
         }

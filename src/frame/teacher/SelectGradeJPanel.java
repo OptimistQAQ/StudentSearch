@@ -2,7 +2,7 @@ package frame.teacher;
 
 import javax.swing.*;
 
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import handle.HandleSQL;
 import util.DialogUtil;
 import util.FileUtil;
@@ -10,6 +10,9 @@ import util.FileUtil;
 import java.awt.Font;
 import java.awt.Color;
 
+/**
+ * @author Optimist
+ */
 public class SelectGradeJPanel extends BaseJPanel {
 
     private String Tno;//教师编号

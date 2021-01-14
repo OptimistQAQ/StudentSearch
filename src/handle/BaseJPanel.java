@@ -1,8 +1,12 @@
-package frame.admin;
+package handle;
 
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * 基类
+ * @author Optimist
+ */
 public class BaseJPanel extends JPanel {
 
     ImageIcon back = new ImageIcon("./src/pictures/background3.png");

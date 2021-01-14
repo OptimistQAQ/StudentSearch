@@ -1,9 +1,14 @@
 package frame.admin;
 
+import handle.BaseJPanel;
 import handle.HandleAdm;
 import javax.swing.JLabel;
 import java.awt.Font;
 
+/**
+ * 管理员信息
+ * @author Optimist
+ */
 public class AdminInfoJPanel extends BaseJPanel {
 
     public AdminInfoJPanel(String Mno) {

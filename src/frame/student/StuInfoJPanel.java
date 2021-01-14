@@ -1,13 +1,14 @@
 package frame.student;
 
 import bean.Student;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import handle.HandleStu;
 import javax.swing.JLabel;
 import java.awt.Font;
 
 /**
  * 个人信息界面
+ * @author Optimist
  */
 public class StuInfoJPanel extends BaseJPanel {
 

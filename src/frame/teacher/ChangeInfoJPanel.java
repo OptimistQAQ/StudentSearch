@@ -3,12 +3,15 @@ package frame.teacher;
 import java.awt.Font;
 import javax.swing.*;
 import bean.Teacher;
-import frame.admin.BaseJPanel;
+import handle.BaseJPanel;
 import handle.HandleSQL;
 import util.DialogUtil;
 
 import java.awt.Color;
 
+/**
+ * @author Optimist
+ */
 public class ChangeInfoJPanel extends BaseJPanel {
 
 	private String Tno;

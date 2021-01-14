@@ -19,6 +19,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 
 /**
  * 学生主界面
+ * @author Optimist
  */
 public class TeaMainGUI extends BaseJFrame implements TreeSelectionListener {
 

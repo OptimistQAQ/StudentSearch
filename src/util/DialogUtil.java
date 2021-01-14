@@ -1,8 +1,10 @@
 package util;
 
 import javax.swing.*;
-import java.awt.*;
 
+/**
+ * @author Optimist
+ */
 public class DialogUtil {
 
     public static void showWarning(String title,String message){

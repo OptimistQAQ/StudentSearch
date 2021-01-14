@@ -1,5 +1,8 @@
 package bean;
 
+/**
+ * @author Optimist
+ */
 public class Admin {
 
     private String Mno;  //管理员号

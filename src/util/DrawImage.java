@@ -5,6 +5,7 @@ import java.awt.*;
 
 /**
  * 设置背景图
+ * @author Optimist
  */
 public class DrawImage extends JPanel {
     ImageIcon back = new ImageIcon("./src/pictures/background.jpg");
