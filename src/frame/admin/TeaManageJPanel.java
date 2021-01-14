@@ -35,17 +35,17 @@ public class TeaManageJPanel extends BaseJPanel {
         setLayout(null);
         initView();
 
-        //////查询教师
+        //查询教师
         searchButton.addActionListener(e -> {
             if (textField.getText().equals("")){
                 DialogUtil.showWarning("提示信息","请先输入教师号！");
             }else {
                 //获取输入的信息
                 String Tno = textField.getText();
-                Object name[] = {"教师号", "姓名", "性别", "年龄", "学院", "学历", "职称", "职务", "联系方式", "邮箱"};
+                Object[] name = {"教师号", "姓名", "性别", "年龄", "学院", "学历", "职称", "职务", "联系方式", "邮箱"};
                 remove(table);
                 remove(pane);
-                Object data[][] = HandleTea.SelectTeacher(Tno);
+                Object[][] data = HandleTea.SelectTeacher(Tno);
                 table = new JTable(data, name);
                 setTableStyle(table);
                 JScrollPane scrollPanel = new JScrollPane(table);
@@ -109,7 +109,7 @@ public class TeaManageJPanel extends BaseJPanel {
             }
         });
 
-        ////删除教师
+        //删除教师
         deleteButton.addActionListener(e -> {
             int index = table.getSelectedRow();
             if (index == -1){
@@ -129,7 +129,7 @@ public class TeaManageJPanel extends BaseJPanel {
             }
         });
 
-        //////密码初始化为123456
+        //密码初始化为123456
         initializeButton.addActionListener(e -> {
             int index = table.getSelectedRow();
             if (index == -1){
@@ -147,19 +147,16 @@ public class TeaManageJPanel extends BaseJPanel {
         });
 
         deptComboBox.addItemListener(e -> {
-            switch (e.getStateChange()){
-                case ItemEvent.SELECTED:
-                    teacherComboBox.setModel(new
-                            DefaultComboBoxModel<>(getTeaByDept(e.getItem().toString(),
-                            "select Tname from teacher where Tdept=?;")));
-                    break;
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                teacherComboBox.setModel(new
+                        DefaultComboBoxModel<>(getTeaByDept(e.getItem().toString(),
+                        "select Tname from teacher where Tdept=?;")));
             }
         });
         teacherComboBox.addItemListener(e -> {
-            switch (e.getStateChange()){
-                case ItemEvent.SELECTED:
-                    textField.setText(getTeaByDept(teacherComboBox.getSelectedItem().toString(),
-                            "select Tno from teacher where Tname=?;")[0]);
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                textField.setText(getTeaByDept(teacherComboBox.getSelectedItem().toString(),
+                        "select Tno from teacher where Tname=?;")[0]);
             }
         });
     }

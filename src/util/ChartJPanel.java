@@ -62,7 +62,7 @@ public class ChartJPanel extends JPanel {
     }
 
     private void setDataSet(DefaultCategoryDataset dataset) {
-        Object data[][] = GradeUtil.getGradeToChart(sno,year,term);
+        Object[][] data = GradeUtil.getGradeToChart(sno,year,term);
         for (int i = 0; i < data.length; i++) {
             dataset.addValue(Double.parseDouble(data[i][1].toString()),"成绩",data[i][0].toString());
             dataset.addValue(Double.parseDouble(data[i][2].toString()),"学分",data[i][0].toString());

@@ -44,12 +44,10 @@ public class StuManageJPanel extends BaseJPanel {
         deptComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                switch (e.getStateChange()) {
-                    case ItemEvent.SELECTED:
-                        majorComboBox.setModel(new DefaultComboBoxModel<>(
-                                ClassUtil.getMajorByDept(e.getItem().toString())
-                        ));
-                        break;
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    majorComboBox.setModel(new DefaultComboBoxModel<>(
+                            ClassUtil.getMajorByDept(e.getItem().toString())
+                    ));
                 }
             }
         });
@@ -57,12 +55,10 @@ public class StuManageJPanel extends BaseJPanel {
         majorComboBox.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
-                switch (e.getStateChange()) {
-                    case ItemEvent.SELECTED:
-                        classComboBox.setModel(new DefaultComboBoxModel<>(
-                                ClassUtil.getClassByMajor(e.getItem().toString())
-                        ));
-                        break;
+                if (e.getStateChange() == ItemEvent.SELECTED) {
+                    classComboBox.setModel(new DefaultComboBoxModel<>(
+                            ClassUtil.getClassByMajor(e.getItem().toString())
+                    ));
                 }
             }
         });
@@ -138,7 +134,7 @@ public class StuManageJPanel extends BaseJPanel {
         });
     }
 
-    //////查询学生
+    //查询学生
     private void updateGrade(){
         remove(pane);
         String sClass = classComboBox.getSelectedItem().toString();

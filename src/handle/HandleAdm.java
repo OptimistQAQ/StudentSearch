@@ -30,7 +30,7 @@ public class HandleAdm {
     }
 
     public static boolean UpdateManager(String Mno, String Mname, String Msex, String Mage, String Memail, String Mtel) {
-        String data[] = showManager(Mno);
+        String[] data = showManager(Mno);
         try {
             while (data != null) {
                 PreparedStatement statement = con.prepareStatement(updateSQL);

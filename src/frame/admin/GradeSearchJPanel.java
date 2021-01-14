@@ -38,22 +38,18 @@ public class GradeSearchJPanel extends BaseJPanel {
         setLayout(null);
         initView();
         deptComboBox.addItemListener(e -> {
-            switch (e.getStateChange()){
-                case ItemEvent.SELECTED:
-                    majorComboBox.setModel(new DefaultComboBoxModel<>(
-                            ClassUtil.getMajorByDept(e.getItem().toString())
-                    ));
-                    break;
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                majorComboBox.setModel(new DefaultComboBoxModel<>(
+                        ClassUtil.getMajorByDept(e.getItem().toString())
+                ));
             }
         });
 
         majorComboBox.addItemListener(e -> {
-            switch (e.getStateChange()){
-                case ItemEvent.SELECTED:
-                    classComboBox.setModel(new DefaultComboBoxModel<>(
-                            ClassUtil.getClassByMajor(e.getItem().toString())
-                    ));
-                    break;
+            if (e.getStateChange() == ItemEvent.SELECTED) {
+                classComboBox.setModel(new DefaultComboBoxModel<>(
+                        ClassUtil.getClassByMajor(e.getItem().toString())
+                ));
             }
         });
 

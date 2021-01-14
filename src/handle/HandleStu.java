@@ -9,6 +9,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+/**
+ * @author Optimist
+ */
 public class HandleStu {
 
     private static String searchSQL = "select student.* ,class.CLdept,class.CLmajor from student,class " +

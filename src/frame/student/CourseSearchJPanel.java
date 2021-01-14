@@ -93,8 +93,8 @@ public class CourseSearchJPanel extends BaseJPanel {
 
     void handle_query(String Sno,String Cyear,String Cterm) {
         HandleSQL handlesql =new HandleSQL(DBHelper.getConnect());
-        Object data[][] = handlesql.getCosInfoBySQL(Sno,Cyear, Cterm);
-        Object name[] = {"课程名","上课周数","上课地点","上课时间1","上课时间2","教师","学时","学分","属性"};
+        Object[][] data = handlesql.getCosInfoBySQL(Sno,Cyear, Cterm);
+        Object[] name = {"课程名","上课周数","上课地点","上课时间1","上课时间2","教师","学时","学分","属性"};
         remove(courseTable);
         remove(pane);
         courseTable = new JTable(data,name);

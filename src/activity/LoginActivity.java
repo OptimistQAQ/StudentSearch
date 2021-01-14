@@ -34,7 +34,7 @@ import java.awt.Toolkit;
 import java.awt.Color;
 
 /**
- * 主入口
+ * LoginActivity
  * @author Optimist
  */
 public class LoginActivity extends JFrame implements KeyListener {
