@@ -216,24 +216,6 @@ public class HandleSQL {
         return result;
     }
 
-    //根据Sno,Cno,Grade信息录入到成绩表里
-    public static  boolean InsertMessage(String Sno,String Cno,Double Grade){
-        String insertSQL = "insert into csgrade (Sno,Cno,Grade) " + "values (?,?,?);";
-        try{
-            preparedsmt = con.prepareStatement(insertSQL);
-            preparedsmt.setString(1,Sno);
-            preparedsmt.setString(2,Cno);
-            preparedsmt.setDouble(3,Grade);
-            int result = preparedsmt.executeUpdate();
-            if(result > 0){
-                return true;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return false;
-    }
-
     //查找教师号为Tno的所教的所有课程并返回
     public static String[] getAllTeachingCourse(String Tno) {
         String selectCourseSQL = "select Cname " +
@@ -262,37 +244,6 @@ public class HandleSQL {
         return courselist;
     }
 
-    //查找课程号为Cno的考试信息并返回
-    public static String[][] getExamMessage(String Cno) {
-        String selectExamMessage = "select Cname,Eposition,Etime,Endtime,Eclno "+
-                "from exam,course "+
-                "where Ecno=? and Ecno=Cno;";
-        String[][] exammessage = new String[0][];
-        int count = 0;
-        try{
-            preparedsmt = con.prepareStatement(selectExamMessage);
-            System.out.println(Cno);
-            preparedsmt.setString(1, Cno);
-            rs = preparedsmt.executeQuery();
-            while (rs.next()){
-                count ++;
-            }
-            exammessage = new String[count][5];
-            count = 0;
-            rs = preparedsmt.executeQuery();
-            while (rs.next()){
-                exammessage[count][0] = rs.getString(1);
-                exammessage[count][1] = rs.getString(2);
-                exammessage[count][2] = rs.getString(3);
-                exammessage[count][3] = rs.getString(4);
-                exammessage[count][4] = rs.getString(5);
-                count ++;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return exammessage;
-    }
 
     //查找教师号为Tno的所教的所有班C级号并返回
     public static String[] getAllTeachingCLno(String Tno) {
@@ -337,7 +288,7 @@ public class HandleSQL {
             result = new String[count][6];
             count = 0;
             rs = preparedsmt.executeQuery();
-            while (rs.next()){
+            while (rs.next()) {
                 result[count][0] = rs.getString(1);
                 result[count][1] = rs.getString(2);
                 result[count][2] = rs.getString(3);
@@ -447,25 +398,6 @@ public class HandleSQL {
             e.printStackTrace();
         }
         return false;
-    }
-
-    //查找学号为Sno的学生姓名并返回
-    public static String getStuName(String Sno) {
-        String stuname = "";
-        String selectStuNameSQL = "select Sname from student where Sno = ? ;";
-        try {
-            preparedsmt = con.prepareStatement(selectStuNameSQL);
-            preparedsmt.setString(1,Sno);
-            rs = preparedsmt.executeQuery();
-            while(rs.next())
-            {
-                stuname = rs.getString(1);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return stuname;
     }
 
     //查找教师号为Tno的教师姓名并返回
