@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BaseJPanel extends JPanel {
+
     ImageIcon back = new ImageIcon("./src/pictures/background3.png");
+
     public BaseJPanel(String title){
         JLabel lblNewLabel = new JLabel(title);
         lblNewLabel.setFont(new Font("楷体", Font.BOLD, 22));
@@ -12,6 +14,7 @@ public class BaseJPanel extends JPanel {
         add(lblNewLabel);
     }
 
+    @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(back.getImage(), 0, 0,getWidth(), getHeight(), this);

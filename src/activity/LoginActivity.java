@@ -296,7 +296,7 @@ public class LoginActivity extends JFrame implements KeyListener {
                 //处理登录,参数是用户名,密码,登录身份
                 handle_enter(txtField.getText(), new String(pwdField.getPassword()), identity);
             } catch (SQLException e1) {
-                System.out.println(e1);
+                System.out.println(e1.getMessage());
             }
         }
     }
